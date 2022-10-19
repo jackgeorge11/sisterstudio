@@ -1,0 +1,26 @@
+.layout {
+  width: 100%;
+
+  .header {
+    border: $border;
+    @include sizer($w: 100%, $h: $header-height, $nh: 2);
+  }
+
+  nav {
+    height: 100vh;
+    width: $nav-width;
+
+    a {
+      @include sizer(100%, 2, $nav-width, 2);
+      @include flex;
+      @include borders($t: none);
+      font-family: "Courier New", Courier, monospace;
+      font-weight: 800;
+      color: blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
